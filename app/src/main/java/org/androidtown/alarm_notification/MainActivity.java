@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -22,7 +23,7 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-    /*
+
     AlarmReceiver alarmReceiver;
     Button AccessTime;
     TextView DisplayTime;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     String format;
     Calendar cal;
     TimePickerDialog timepickdialog;
-    */
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseMessaging.getInstance().subscribeToTopic("news");
         FirebaseInstanceId.getInstance().getToken();
-      /*
+
             AccessTime = (Button)findViewById(R.id.button1);
             DisplayTime = (TextView)findViewById(R.id.textView1);
 
@@ -74,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
-*/
 
+        /*
         final Calendar now = Calendar.getInstance();
         now.setTime(new Date());
         //int second = 5000;
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }, now.get(Calendar.HOUR_OF_DAY), now.get(Calendar.MINUTE), false);
     }
-
+    */
     public void setAlarm(Context context, long alarmAt) {
 
         AlarmManager alarmManager = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
@@ -121,9 +122,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
             }
         });
-        */
-    //}
-        /*
+       */
+
+    /*
     public class WebViewJavaScriptInterface
     {
         private Context context;
